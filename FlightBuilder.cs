@@ -8,12 +8,12 @@ namespace TravelRepublic.FlightCodingTest
     {
         public IList<Flight> GetFlights()
         {
-            var threeDaysFromNow = DateTime.Now.AddDays(3);
+            var threeDaysFromNow = DateTime.Now.AddDays(7);
 
             return new List<Flight>
             {
                 // A normal flight with two hour duration
-                CreateFlight(threeDaysFromNow, threeDaysFromNow.AddHours(2)),
+                CreateFlight(threeDaysFromNow, threeDaysFromNow.AddHours(5)),
 
                 // A normal multi-segment flight
                 CreateFlight(threeDaysFromNow, threeDaysFromNow.AddHours(2), threeDaysFromNow.AddHours(3), threeDaysFromNow.AddHours(5)),
